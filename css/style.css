@@ -158,7 +158,7 @@ section {
 
 /* Hero Section */
 .hero-section {
-    background: linear-gradient(rgba(0, 0, 0, 0.8), rgba(0, 0, 0, 0.8)), url('../assets/images/hero-bg.jpg') no-repeat center center/cover;
+    background: linear-gradient(rgba(0, 0, 0, 0.8), rgba(0, 0, 0, 0.8)), url('../assets/images/全Logo.PNG') no-repeat center center/cover;
     background-attachment: fixed; /* 视差效果 */
     text-align: center;
     color: var(--text-color-light);
@@ -171,22 +171,22 @@ section {
 }
 
 .hero-content .band-logo {
-    width: 200px; /* Adjust size as needed */
+    width: 300px; /* 放大Logo图片 */
     height: auto;
-    margin-bottom: 30px;
-    filter: drop-shadow(0 0 25px var(--accent-color)); /* 更强的Logo发光 */
+    margin-bottom: 10px; /* 增加Logo底部间距 */
+    filter: drop-shadow(0 0 35px var(--accent-color)); /* 更强的Logo发光 */
 }
 
 .hero-content h1 {
-    font-size: 4em;
-    margin-bottom: 20px;
-    text-shadow: 0 0 20px var(--accent-color); /* H1标题发光 */
+    font-size: 3em; /* 增大标题字体 */
+    margin-bottom: 15px; /* 调整标题底部间距 */
+    text-shadow: 0 0 25px var(--accent-color); /* H1标题发光 */
 }
 
 .hero-content p {
-    font-size: 1.3em;
-    margin-bottom: 40px;
-    max-width: 600px;
+    font-size: 1.4em; /* 增大段落字体 */
+    margin-bottom: 50px; /* 调整段落底部间距 */
+    max-width: 700px; /* 增加段落最大宽度 */
     margin-left: auto;
     margin-right: auto;
 }
@@ -205,6 +205,26 @@ section {
     max-width: 1400px; /* 增加时间轴的宽度 */
     margin: 0 auto;
     padding: 40px 0;
+    max-height: 1500px; /* 增加时间轴区域高度，以显示更多卡片 */
+    overflow-y: auto; /* 添加垂直滚动条 */
+    scrollbar-width: thin; /* Firefox */
+    scrollbar-color: var(--accent-color) var(--secondary-bg-color); /* Firefox */
+}
+
+/* 自定义滚动条样式 */
+.timeline::-webkit-scrollbar {
+    width: 8px;
+}
+
+.timeline::-webkit-scrollbar-track {
+    background: var(--secondary-bg-color);
+    border-radius: 10px;
+}
+
+.timeline::-webkit-scrollbar-thumb {
+    background-color: var(--accent-color);
+    border-radius: 10px;
+    border: 2px solid var(--secondary-bg-color);
 }
 
 .timeline::before {
@@ -220,52 +240,52 @@ section {
 }
 
 .timeline-item {
-    padding: 20px 0;
+    padding: 10px 0; /* 进一步减小纵向填充 */
     position: relative;
-    width: 50%;
-    margin-bottom: 50px;
+    width: 30%; /* 保持宽度不变 */
+    margin-bottom: 10px; /* 进一步减小底部间距 */
 }
 
 .timeline-item:nth-child(odd) {
-    left: 0;
-    padding-right: 60px;
+    left: calc(50% - 8px - 30%); /* 调整左侧卡片位置，使其右边缘与时间轴点对齐 */
+    padding-right: 15px; /* 保持距离不变 */
     text-align: right;
 }
 
 .timeline-item:nth-child(even) {
-    left: 50%;
-    padding-left: 60px;
+    left: calc(50% + 8px); /* 调整右侧卡片位置，使其左边缘与时间轴点对齐 */
+    padding-left: 15px; /* 保持距离不变 */
     text-align: left;
 }
 
 .timeline-item::after {
     content: '';
     position: absolute;
-    width: 20px;
-    height: 20px;
+    width: 16px; /* 保持大小不变 */
+    height: 16px; /* 保持大小不变 */
     background-color: var(--accent-color);
     border-radius: 50%;
-    top: 25px;
-    right: -10px;
+    top: 15px; /* 进一步调整时间轴点位置 */
+    right: -8px; /* 保持位置不变，使其中心与时间轴线对齐 */
     z-index: 1;
     border: 3px solid var(--primary-bg-color);
     box-shadow: var(--glow-shadow); /* 时间轴点发光 */
 }
 
 .timeline-item:nth-child(even)::after {
-    left: -10px;
+    left: -8px; /* 保持位置不变，使其中心与时间轴线对齐 */
 }
 
 .timeline-year {
-    font-size: 1.8em;
+    font-size: 1.6em; /* 保持字体大小不变 */
     font-weight: bold;
     color: var(--accent-color);
-    margin-bottom: 10px;
+    margin-bottom: 5px; /* 进一步减小年份底部间距 */
 }
 
 .timeline-content {
     background-color: rgba(255, 255, 255, 0.08); /* 更透明的背景 */
-    padding: 25px;
+    padding: 5px; /* 进一步缩小内边距 */
     border-radius: 8px;
     box-shadow: var(--glow-shadow); /* 发光阴影 */
     transition: transform 0.3s ease, box-shadow 0.3s ease;
@@ -280,18 +300,18 @@ section {
 .timeline-content img {
     max-width: 100%;
     border-radius: 5px;
-    margin-bottom: 15px;
+    margin-bottom: 8px; /* 进一步减小图片底部间距 */
 }
 
 .timeline-content h3 {
-    font-size: 1.5em;
-    margin-bottom: 10px;
+    font-size: 1.3em; /* 保持字体大小不变 */
+    margin-bottom: 3px; /* 进一步减小标题底部间距 */
 }
 
 .timeline-content p {
-    font-size: 0.95em;
+    font-size: 0.9em; /* 保持字体大小不变 */
     color: var(--text-color-dark);
-    margin-bottom: 15px;
+    margin-bottom: 8px; /* 进一步减小段落底部间距 */
 }
 
 /* Works Section */
@@ -301,54 +321,86 @@ section {
     padding-bottom: 100px;
 }
 
-.works-category {
-    margin-bottom: 80px;
+.works-tabs {
+    display: flex;
+    justify-content: center;
+    margin-bottom: 40px;
+    gap: 20px;
 }
 
-.works-category h3 {
-    font-size: 2em;
-    text-align: center;
-    margin-bottom: 40px;
+.tab-button {
+    background-color: rgba(224, 247, 250, 0.1);
     color: var(--accent-color);
-    text-shadow: 0 0 10px var(--accent-color); /* 作品分类标题发光 */
+    padding: 12px 30px;
+    border: 1px solid var(--accent-color);
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 1.1em;
+    font-weight: bold;
+    transition: background-color 0.3s ease, box-shadow 0.3s ease, transform 0.3s ease;
+    box-shadow: var(--glow-shadow);
+}
+
+.tab-button:hover {
+    background-color: rgba(224, 247, 250, 0.2);
+    box-shadow: var(--glow-shadow-hover);
+    transform: translateY(-2px);
+}
+
+.tab-button.active {
+    background-color: var(--accent-color);
+    color: var(--primary-bg-color);
+    box-shadow: var(--glow-shadow-hover);
+    transform: translateY(-2px);
+}
+
+.works-content {
+    display: none; /* 默认隐藏 */
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr)); /* 调整为自适应列，每列最小250px */
+    gap: 30px; /* 增加卡片间距 */
+    justify-items: center; /* 居中对齐网格项 */
+    align-items: start; /* 顶部对齐网格项 */
+}
+
+.works-content.active {
+    display: grid; /* 激活时显示为网格布局 */
 }
 
 .singles-grid, .albums-grid {
-    display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
-    gap: 30px;
+    /* 这些规则现在由 .works-content 控制 */
+    display: contents; /* 让子元素直接参与父网格布局 */
 }
 
 .work-item {
-    background-color: rgba(255, 255, 255, 0.08); /* 更透明的背景 */
-    padding: 20px;
+    background-color: rgba(255, 255, 255, 0.08);
+    padding: 15px; /* 调整内边距 */
     border-radius: 8px;
     text-align: center;
-    box-shadow: var(--glow-shadow); /* 发光阴影 */
+    box-shadow: var(--glow-shadow);
     transition: transform 0.3s ease, box-shadow 0.3s ease;
-    border: 1px solid rgba(224, 247, 250, 0.2); /* 细边框 */
+    border: 1px solid rgba(224, 247, 250, 0.2);
 }
 
 .work-item:hover {
     transform: translateY(-5px);
-    box-shadow: var(--glow-shadow-hover); /* 悬停时更强的发光 */
+    box-shadow: var(--glow-shadow-hover);
 }
 
 .work-item img {
     max-width: 100%;
-    height: 200px; /* Fixed height for covers */
+    height: 200px; /* 调整图片高度 */
     object-fit: cover;
     border-radius: 5px;
-    margin-bottom: 15px;
+    margin-bottom: 10px; /* 调整图片底部间距 */
 }
 
 .work-item h4 {
-    font-size: 1.3em;
+    font-size: 1.2em; /* 调整标题字体大小 */
     margin-bottom: 5px;
 }
 
 .work-item p {
-    font-size: 0.9em;
+    font-size: 0.85em; /* 调整段落字体大小 */
     color: var(--text-color-dark);
 }
 
@@ -550,7 +602,7 @@ section {
     }
 
     .singles-grid, .albums-grid {
-        grid-template-columns: 1fr;
+        grid-template-columns: repeat(auto-fit, minmax(250px, 1fr)); /* 确保在小屏幕下也能横向排列 */
     }
 
     .band-members {

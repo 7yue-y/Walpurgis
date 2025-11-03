@@ -51,4 +51,23 @@ document.addEventListener('DOMContentLoaded', () => {
     sections.forEach(section => {
         observer.observe(section);
     });
+
+    // 作品展示部分 Tab 切换功能
+    const tabButtons = document.querySelectorAll('.works-tabs .tab-button');
+    const worksContents = document.querySelectorAll('.works-content');
+
+    tabButtons.forEach(button => {
+        button.addEventListener('click', function() {
+            // 移除所有按钮的 active 类
+            tabButtons.forEach(btn => btn.classList.remove('active'));
+            // 隐藏所有作品内容
+            worksContents.forEach(content => content.classList.remove('active'));
+
+            // 为当前点击的按钮添加 active 类
+            this.classList.add('active');
+            // 显示对应的作品内容
+            const targetId = this.dataset.target;
+            document.getElementById(targetId).classList.add('active');
+        });
+    });
 });

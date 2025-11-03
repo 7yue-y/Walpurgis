@@ -42,24 +42,50 @@
                 <div class="timeline">
                     <!-- 时间轴事件将通过JS动态加载或在此处静态添加 -->
                     <div class="timeline-item">
-                        <div class="timeline-year">2025.11.2</div>
+                        <div class="timeline-year">2025.11.1</div>
                         <div class="timeline-content">
-                            <img src="assets/images/25.11.1原鼓.JPG" alt="2025年演出">
+                            <img src="assets/images/LiveActions/25.11.1原鼓.JPG" alt="2025年演出">
                             <h3>ACG 二次元动漫祭</h3>
-                            <p></p>
+                            <p>一场充满活力的动漫音乐盛会，我们带来了最燃的日系摇滚！</p>
                             <button class="btn-event-details">查看详情</button>
                         </div>
                     </div>
                     <div class="timeline-item">
                         <div class="timeline-year">2025.10.26</div>
                         <div class="timeline-content">
-                            <img src="assets/images/25.10.26 Mao.jpg" alt="2025年演出">
+                            <img src="assets/images/LiveActions/25.10.26 Mao.jpg" alt="2025年演出">
                             <h3>【深圳】次元ACG乐队拼盘</h3>
+                            <p>与众多优秀乐队同台，为二次元文化献上我们的音乐。</p>
+                            <button class="btn-event-details">查看详情</button>
+                        </div>
+                    </div>
+                    <div class="timeline-item">
+                        <div class="timeline-year">2025.10.7</div>
+                        <div class="timeline-content">
+                            <img src="assets/images/LiveActions/25.10.7 广州音爆.jpg" alt="2025年演出">
+                            <h3>广州音爆</h3>
                             <p></p>
                             <button class="btn-event-details">查看详情</button>
                         </div>
                     </div>
-                    <!-- 更多时间轴事件 -->
+                    <div class="timeline-item">
+                        <div class="timeline-year">2025.8.24</div>
+                        <div class="timeline-content">
+                            <img src="assets/images/LiveActions/25.8.24夏日anisong.jpg" alt="2025年演出">
+                            <h3>夏日anisong</h3>
+                            <p></p>
+                            <button class="btn-event-details">查看详情</button>
+                        </div>
+                    </div>
+                    <div class="timeline-item">
+                        <div class="timeline-year">2025.7.13</div>
+                        <div class="timeline-content">
+                            <img src="assets/images/LiveActions/25.7.13 次元音.jpg" alt="2025年演出">
+                            <h3>7.13次元音（魔女首演）</h3>
+                            <p></p>
+                            <button class="btn-event-details">查看详情</button>
+                        </div>
+                    </div>
                 </div>
             </div>
         </section>
@@ -67,37 +93,40 @@
         <section id="works" class="works-section">
             <div class="container">
                 <h2>作品展示</h2>
-                <div class="works-category">
-                    <h3>单曲</h3>
-                    <div class="singles-grid">
-                        <div class="work-item">
-                            <img src="assets/images/single-cover-1.jpg" alt="单曲封面1">
-                            <h4>单曲名称 1</h4>
-                            <p>发布日期：2023-01-15</p>
-                        </div>
-                        <div class="work-item">
-                            <img src="assets/images/single-cover-2.jpg" alt="单曲封面2">
-                            <h4>单曲名称 2</h4>
-                            <p>发布日期：2023-03-20</p>
-                        </div>
-                        <!-- 更多单曲 -->
-                    </div>
+                <div class="works-tabs">
+                    <button class="tab-button active" data-target="singles">单曲</button>
+                    <button class="tab-button" data-target="albums">专辑</button>
                 </div>
-                <div class="works-category">
-                    <h3>专辑</h3>
-                    <div class="albums-grid">
-                        <div class="work-item">
-                            <img src="assets/images/album-cover-1.jpg" alt="专辑封面1">
-                            <h4>专辑名称 1</h4>
-                            <p>发布日期：2022-07-01</p>
-                        </div>
-                        <div class="work-item">
-                            <img src="assets/images/album-cover-2.jpg" alt="专辑封面2">
-                            <h4>专辑名称 2</h4>
-                            <p>发布日期：2022-11-10</p>
-                        </div>
-                        <!-- 更多专辑 -->
+                <div id="singles" class="works-content active">
+                    <div class="work-item">
+                        <img src="assets/images/作品/单曲/暴食症.jpg" alt="单曲封面1">
+                        <h4>暴食症</h4>
+                        <p>发布日期：2024-12-22</p>
                     </div>
+                    <div class="work-item">
+                        <img src="assets/images/作品/单曲/暴食症.jpg" alt="单曲封面2">
+                        <h4>单曲名称 2</h4>
+                        <p>发布日期：2023-03-20</p>
+                    </div>
+                    <div class="work-item">
+                        <img src="assets/images/作品/单曲/暴食症.jpg" alt="单曲封面2">
+                        <h4>单曲名称 2</h4>
+                        <p>发布日期：2023-03-20</p>
+                    </div>
+                    <!-- 更多单曲 -->
+                </div>
+                <div id="albums" class="works-content">
+                    <div class="work-item">
+                        <img src="assets/images/作品/单曲/暴食症.jpg" alt="专辑封面1">
+                        <h4>专辑名称 1</h4>
+                        <p>发布日期：2022-07-01</p>
+                    </div>
+                    <div class="work-item">
+                        <img src="assets/images/作品/单曲/暴食症.jpg" alt="专辑封面2">
+                        <h4>专辑名称 2</h4>
+                        <p>发布日期：2022-11-10</p>
+                    </div>
+                    <!-- 更多专辑 -->
                 </div>
             </div>
         </section>
