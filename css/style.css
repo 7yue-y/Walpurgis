@@ -319,6 +319,16 @@ section {
     background-color: var(--primary-bg-color);
     padding-top: 100px;
     padding-bottom: 100px;
+    display: flex; /* 添加 flex 布局 */
+    flex-direction: column; /* 垂直排列子元素 */
+    align-items: center; /* 水平居中对齐 */
+}
+
+.works-section .container {
+    display: flex; /* 添加 flex 布局 */
+    flex-direction: column; /* 垂直排列子元素 */
+    align-items: center; /* 水平居中对齐 */
+    width: 100%; /* 确保容器占据全部宽度 */
 }
 
 .works-tabs {
@@ -356,19 +366,19 @@ section {
 
 .works-content {
     display: none; /* 默认隐藏 */
-    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr)); /* 调整为自适应列，每列最小250px */
-    gap: 30px; /* 增加卡片间距 */
-    justify-items: center; /* 居中对齐网格项 */
+    justify-content: center; /* 水平居中对齐网格容器内的项目 */
     align-items: start; /* 顶部对齐网格项 */
 }
 
 .works-content.active {
-    display: grid; /* 激活时显示为网格布局 */
+    display: flex; /* 激活时显示为 flex 布局 */
+    flex-wrap: wrap; /* 允许项目换行 */
+    gap: 30px; /* 增加卡片间距 */
 }
 
 .singles-grid, .albums-grid {
     /* 这些规则现在由 .works-content 控制 */
-    display: contents; /* 让子元素直接参与父网格布局 */
+    /* 移除 display: contents，因为这些元素已从 HTML 中移除 */
 }
 
 .work-item {
@@ -379,6 +389,8 @@ section {
     box-shadow: var(--glow-shadow);
     transition: transform 0.3s ease, box-shadow 0.3s ease;
     border: 1px solid rgba(224, 247, 250, 0.2);
+    flex: 0 0 300px; /* 固定项目宽度为250px，不允许伸缩 */
+    max-width: 300px; /* 设置最大宽度，防止过宽 */
 }
 
 .work-item:hover {
