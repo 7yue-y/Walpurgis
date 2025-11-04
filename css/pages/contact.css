@@ -1,0 +1,59 @@
+/* Contact Page Specific Styles */
+
+/* Contact Section */
+.contact-section {
+    background-color: var(--primary-bg-color);
+    padding-top: 100px;
+    padding-bottom: 100px;
+    text-align: center;
+}
+
+.contact-section p {
+    font-size: 1.1em;
+    margin-bottom: 30px;
+    color: var(--text-color-dark);
+}
+
+.contact-section ul {
+    list-style: none;
+    margin-bottom: 40px;
+}
+
+.contact-section ul li {
+    margin-bottom: 10px;
+    font-size: 1.1em;
+}
+
+.contact-section ul li a {
+    color: var(--accent-color);
+}
+
+.contact-section ul li img {
+    width: 30px; /* Adjust icon size as needed */
+    height: 30px;
+    vertical-align: middle;
+    margin: 0 5px;
+    filter: drop-shadow(0 0 5px var(--accent-color));
+    transition: filter 0.3s ease, transform 0.3s ease;
+}
+
+.contact-section ul li a:hover img {
+    filter: drop-shadow(0 0 10px var(--accent-color));
+    transform: translateY(-2px);
+}
+
+/* Call to Action Section */
+.call-to-action {
+    padding: 50px 0;
+    text-align: center;
+    background: none;
+    border: none;
+    box-shadow: none;
+}
+
+.call-to-action p {
+    font-size: 1.8em;
+    font-weight: bold;
+    color: var(--accent-color);
+    text-shadow: 0 0 15px var(--accent-color);
+}

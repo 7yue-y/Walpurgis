@@ -70,4 +70,38 @@ document.addEventListener('DOMContentLoaded', () => {
             document.getElementById(targetId).classList.add('active');
         });
     });
+
+    // 成员介绍模态框功能
+    const memberCards = document.querySelectorAll('.member-card');
+    const memberModal = document.getElementById('member-modal');
+    const closeButton = document.querySelector('.close-button');
+    const modalImage = document.getElementById('modal-image');
+    const modalName = document.getElementById('modal-name');
+    const modalDescription = document.getElementById('modal-description');
+
+    memberCards.forEach(card => {
+        card.addEventListener('click', function() {
+            const name = this.dataset.name;
+            const image = this.dataset.image;
+            const description = this.dataset.description;
+
+            modalImage.src = image;
+            modalImage.alt = name;
+            modalName.textContent = name;
+            modalDescription.textContent = description;
+
+            memberModal.style.display = 'flex'; // 显示模态框
+        });
+    });
+
+    closeButton.addEventListener('click', () => {
+        memberModal.style.display = 'none'; // 隐藏模态框
+    });
+
+    // 点击模态框外部区域关闭模态框
+    memberModal.addEventListener('click', (event) => {
+        if (event.target === memberModal) {
+            memberModal.style.display = 'none';
+        }
+    });
 });
