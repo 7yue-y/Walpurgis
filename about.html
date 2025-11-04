@@ -5,6 +5,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Walpurgis - 乐队介绍</title>
     <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="css/pages/about.css">
 </head>
 <body>
     <header class="main-header">
@@ -32,37 +33,35 @@
                     我们相信音乐是连接灵魂的桥梁，每一次创作都是一次自我探索和表达。</p>
                 <!-- 乐队成员介绍 -->
                 <div class="band-members">
-                    <div class="member-card">
+                    <div class="member-card" data-name="晒米" data-image="assets/images/成员相册/晒米.jpg" data-description="狐妖小红娘op、幻塔手游ost、非人学园ost、萌妻食神ost、一人之下手游概念曲演唱者。">
                         <img src="assets/images/成员相册/晒米.jpg" alt="主唱晒米">
                         <h3>晒米</h3>
-                        <p>主唱Shymie晒米，狐妖小红娘op、幻塔手游ost、非人学园ost、萌妻食神ost、
-                            一人之下手游概念曲演唱者。</p>
+                        <p class="member-position">旋律主唱</p>
                     </div>
-                    <div class="member-card">
+                    <div class="member-card" data-name="Loong" data-image="assets/images/成员相册/Loong.jpg" data-description="长沙滨江青年乐队大赛（冠军）、vox livehouse-左家垅制躁、粮店manna-幻烬岛屿">
                         <img src="assets/images/成员相册/Loong.jpg" alt="主唱Loong">
                         <h3>Loong</h3>
-                        <p>极端嗓主唱Loong龙，长沙滨江青年乐队大赛（冠军）、vox livehouse-左家垅制躁、粮店manna-幻烬岛屿</p>
+                        <p class="member-position">极端嗓主唱</p>
                     </div>
-                    <div class="member-card">
+                    <div class="member-card" data-name="阿鲁巴" data-image="assets/images/成员相册/阿鲁巴.jpg" data-description="现代音声研究会成员,2018年荣膺广州Anivo动漫音乐节最佳嘉宾乐队称号、2019年8月获邀出席福建仙游音乐节">
                         <img src="assets/images/成员相册/阿鲁巴.jpg" alt="吉他手阿鲁巴">
                         <h3>阿鲁巴</h3>
-                        <p>现代音声研究会成员,2018年荣膺广州Anivo动漫音乐节最佳嘉宾乐队称号、
-                            2019年8月获邀出席福建仙游音乐节</p>
+                        <p class="member-position">节奏吉他手</p>
                     </div>
-                    <div class="member-card">
+                    <div class="member-card" data-name="Solar" data-image="assets/images/成员相册/Solar.jpg" data-description="这是一个喜欢YOASOBI和Ave Mujica的、不知道从哪里冒出来的前旋死吉他手。">
                         <img src="assets/images/成员相册/Solar.jpg" alt="吉他手Solar">
                         <h3>Solar</h3>
-                        <p>主音吉他手兼任编曲制作人，这是一个喜欢YOASOBI和Ave Mujica的、不知道从哪里冒出来的前旋死吉他手。</p>
+                        <p class="member-position">主音吉他手兼任编曲制作人</p>
                     </div>
-                    <div class="member-card">
+                    <div class="member-card" data-name="咚咚" data-image="assets/images/成员相册/咚咚.jpg" data-description="独立设计师，毕业于英国皇家艺术学院，负责多个乐队logo、海报、周边、VJ制作及乐队自媒体运营">
                         <img src="assets/images/成员相册/咚咚.jpg" alt="Bass手咚咚">
                         <h3>咚咚</h3>
-                        <p>独立设计师，毕业于英国皇家艺术学院，负责多个乐队logo、海报、周边、VJ制作及乐队自媒体运营</p>
+                        <p class="member-position">贝斯手</p>
                     </div>
-                    <div class="member-card">
-                        <img src="" alt="鼓手">
-                        <h3>XXX</h3>
-                        <p></p>
+                    <div class="member-card" data-name="七月" data-image="assets/images/成员相册/七月.jpg" data-description="曾经的男高制作人，现负责部分编曲制作和魔女作品的后期混音母带，偶尔也返场演出弹一下吉他">
+                        <img src="assets/images/成员相册/七月.jpg" alt="制作人">
+                        <h3>七月</h3>
+                        <p class="member-position">制作人</p>
                     </div>
 
                     <!-- 更多成员 -->
@@ -70,6 +69,16 @@
             </div>
         </section>
     </main>
+
+    <!-- 成员介绍模态框 -->
+    <div id="member-modal" class="modal">
+        <div class="modal-content">
+            <span class="close-button">&times;</span>
+            <img id="modal-image" src="" alt="成员照片">
+            <h3 id="modal-name"></h3>
+            <p id="modal-description"></p>
+        </div>
+    </div>
 
     <footer class="main-footer">
         <div class="container">
